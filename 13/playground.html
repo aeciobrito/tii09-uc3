@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="changeStyleBtn">Alterar Estilo</button>
+    <div id="box" style="width: 100px; height: 100px; background: lightblue;"></div>
+
+    <script>
+        /*
+        element.style.color = "red";
+        element.style.background = "black";
+        element.style.fontSize = "20px";
+        */
+        const button = document.getElementById("changeStyleBtn");
+        const box = document.getElementById("box");
+
+        button.addEventListener("click", () => {
+            box.style.background = "pink";
+            box.style.border = "2px solid black";
+            box.style.borderRadius = "10px";
+        })
+    </script>
+</body>
+</html>

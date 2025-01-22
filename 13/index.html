@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 09</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <nav class="header-nav">
+                <a href="../index.html" class="brand">UC3</a>
+                <ul class="nav-links">
+                    <li><a href="../12/index.html">Anterior</a></li>
+                    <li><a href="#atividade">Atividade</a></li>
+                    <li><a href="../14/index.html">Próxima</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section>
+        <div class="container">
+            <h1>Estilizando com JavaScript: Manipulação de Estilos e Classes Dinamicamente</h1>
+            <hr>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <h3>Objetivos da Aula</h3>
+            <p>
+            <ul>
+                <li>Entender como manipular estilos diretamente em elementos com JavaScript.</li>
+                <li>Aprender a adicionar, remover e alternar classes dinamicamente.</li>
+                <li>Criar efeitos visuais básicos utilizando manipulação de estilos e classes.</li>
+            </ul>
+            </p>
+            <hr>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <h3>Conteúdo da Aula</h3>
+            <ol>
+                <li>
+                    <h4>Manipulando Estilos Diretamente</h4>
+                    <ul>
+                        <li>A propriedade style permite alterar o estilo de um elemento diretamente:
+                            <div class="code-block">
+                                <div class="code-block-title">JavaScript</div>
+                                <pre><code>
+element.style.color = "red";
+element.style.backgroundColor = "yellow";
+element.style.fontSize = "20px";                                    
+                                </code></pre>
+                            </div>
+                        </li>
+                        <li>Exemplo Prático:
+                            <div class="code-block">
+                                <div class="code-block-title">JavaScript</div>
+                                <pre><code>
+&ltbutton id="changeStyleBtn">Alterar Estilo&lt/button>
+&ltdiv id="box" style="width: 100px; height: 100px; background-color: lightblue;">&lt/div>
+
+&ltscript>
+    const button = document.getElementById("changeStyleBtn");
+    const box = document.getElementById("box");
+
+    button.addEventListener("click", () => {
+    box.style.backgroundColor = "pink";
+    box.style.border = "2px solid black";
+    box.style.borderRadius = "10px";
+    });
+&lt/script>
+                                    
+                                </code></pre>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <h4>Adicionando e Removendo Classes</h4>
+                    <ul>
+                        <li><code>classList.add("className"):</code> Adiciona uma classe.</li>
+                        <li><code>classList.remove("className"):</code> Remove uma classe.</li>
+                        <li><code>classList.toggle("className"):</code> Adiciona a classe se ela não existir; remove se
+                            já existir.</li>
+                        <li>Exemplo Prático:
+                            <div class="code-block">
+                                <div class="code-block-title">JavaScript</div>
+                                <pre><code>
+&ltbutton id="toggleClassBtn">Alternar Estilo&lt/button>
+&ltdiv id="box2" class="blue-box">&lt/div>
+                                    
+&ltstyle>
+    .blue-box {
+    width: 100px;
+    height: 100px;
+    background-color: blue;
+    }
+    .red-box {
+    background-color: red;
+    }
+&lt/style>
+
+&ltscript>
+    const toggleBtn = document.getElementById("toggleClassBtn");
+    const box2 = document.getElementById("box2");
+
+    toggleBtn.addEventListener("click", () => {
+    box2.classList.toggle("red-box");
+    });
+&lt/script>                                                                       
+                                </code></pre>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+            </ol>
+            <hr>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <h3>Exercícios Práticos</h3>
+            <ol>
+                <li>
+                    <p>Mudar a cor de um botão ao passar o mouse</p>
+                    <p>Crie um botão que mude de cor ao passar o mouse sobre ele e volte ao original ao remover o mouse.
+                    </p>
+                    <div class="code-block">
+                        <div class="code-block-title">HTML</div>
+                        <pre><code>
+&ltbutton id="hoverBtn">Passe o Mouse Aqui&lt/button>
+
+&ltscript>
+    const hoverBtn = document.getElementById("hoverBtn");
+
+    hoverBtn.addEventListener("mouseover", () => {
+    hoverBtn.style.backgroundColor = "green";
+    });
+
+    hoverBtn.addEventListener("mouseout", () => {
+    hoverBtn.style.backgroundColor = "";
+    });
+&lt/script>                                                       
+                        </code></pre>
+                    </div>
+                </li>
+                <li>
+                    <p>Ativar e desativar modo noturno</p>
+                    <p>Crie um botão que alterna entre modo claro e escuro na página.</p>
+                    <div class="code-block">
+                        <div class="code-block-title">HTML</div>
+                        <pre><code>
+&ltbutton id="toggleThemeBtn">Alternar Tema&lt/button>
+
+&ltstyle>
+    body.dark-mode {
+    background-color: black;
+    color: white;
+    }
+&lt/style>
+
+&ltscript>
+    const toggleThemeBtn = document.getElementById("toggleThemeBtn");
+
+    toggleThemeBtn.addEventListener("click", () => {
+    document.body.classList.toggle("dark-mode");
+    });
+&lt/script>                            
+                        </code></pre>
+                    </div>
+                </li>
+
+                <li>
+                    <p>Simulando um botão de destaque</p>
+                    <p>Crie um botão que, ao ser clicado, destaque um parágrafo alterando sua borda e cor de fundo.</p>
+                    <div class="code-block">
+                        <div class="code-block-title">HTML</div>
+                        <pre><code>
+&ltbutton id="highlightBtn">Destacar Parágrafo&lt/button>
+&ltp id="paragraph">Este é um parágrafo de exemplo.&lt/p>
+
+&ltscript>
+    const highlightBtn = document.getElementById("highlightBtn");
+    const paragraph = document.getElementById("paragraph");
+
+    highlightBtn.addEventListener("click", () => {
+    paragraph.classList.toggle("highlight");
+    });
+&lt/script>
+
+&ltstyle>
+    .highlight {
+    background-color: yellow;
+    border: 2px solid orange;
+    }
+&lt/style>
+                            
+                        </code></pre>
+                    </div>
+                </li>
+            </ol>
+            <hr>
+            <h4>Resumo e Dicas</h4>
+            <ul>
+                <li>Manipular estilos diretamente é útil, mas usar classes é mais eficiente e organizado.</li>
+                <li>Combine JavaScript e CSS para criar efeitos visuais consistentes e reutilizáveis.</li>
+                <li>Sempre use <code>classList</code> para manipular múltiplos elementos de forma dinâmica e limpa.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id=atividade>
+        <div class="container">
+            <h3>Exercício</h3>
+            <ol>
+                <li>Crie uma lista de itens, onde ao clicar em cada item, ele fique destacado com uma nova cor e fonte.</li>
+                <li>Adicione um botão de "Redefinir Estilos" que retorna todos os elementos ao estilo original.</li>
+            </ol>
+            <hr><br>
+            <p>Adicione o link da atividade <a href="atividade/atividade1.html">aqui</a> e <a href="atividade/atividade2.html">aqui</a></p>
+        </div>
+    </section>
+</body>
+
+</html>

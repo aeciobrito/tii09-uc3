@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .blue-box {
+            width: 100px;
+            height: 100px;
+            background: blue;
+        }
+
+        .red-box {
+            background: red;
+        }
+    </style>
+</head>
+<body>
+    <button id="toggleClassBtn">Alterar Estilo</button>
+    <div id="box" class="blue-box"></div>
+
+    <script>
+        /*
+        element.classList.add("className") // Adiciona uma classe
+        element.classList.remove("className") // Remove uma classe
+        element.classList.toggle("className") // Adiciona a classe se não existir, remove se já exisitr
+        */
+        const toggleBtn = document.getElementById("toggleClassBtn");
+        const box = document.getElementById("box");
+
+        toggleBtn.addEventListener("click", () => {
+            box.classList.toggle("red-box");
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .item {
+            padding: 10px;
+            background-color: lightgray;
+            margin: 5px 0;
+            cursor: pointer;
+        }
+
+        .highlight {
+            background-color: yellow;
+            font-weight: bold;
+            color: darkblue;
+        }
+    </style>
+</head>
+<body>
+    <h1>Lista de Itens</h1>
+
+    <ul id="itemList">
+        <li class="item">Item 1</li>
+        <li class="item">Item 2</li>
+        <li class="item">Item 3</li>
+        <li class="item">Item 4</li>
+    </ul>
+
+    <script>
+        const itemsDaLista = document.querySelectorAll(".item");
+
+        itemsDaLista.forEach(x => {
+            x.addEventListener("click", () => {
+                x.classList.toggle("highlight");
+            })
+        });        
+    </script>
+</body>
+</html>
