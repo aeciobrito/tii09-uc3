@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .item {
+            background: lightgray;
+            margin: 5px 0;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .highlight {
+            background: yellow;
+            font-weight: bold;
+            color: darkblue;
+            font-size: 1.2rem;
+        }
+    </style>
+</head>
+<body>
+    <h1>Lista de Itens</h1>
+
+    <ul>
+        <li class="item">Item 1</li>
+        <li class="item">Item 2</li>
+        <li class="item">Item 3</li>
+        <li class="item">Item 4</li>
+    </ul>
+    <button id="resetBtn">Redefinir Estilos</button>
+    <button id="hideUnselected">Esconder Destacados</button>
+
+    <script>
+        const items = document.querySelectorAll(".item");
+        const resetButton = document.getElementById("resetBtn");
+        const hideBtn = document.getElementById("hideUnselected");
+
+        items.forEach(itm => {
+            itm.addEventListener("click", () => {
+                itm.classList.toggle("highlight");
+            });
+        })
+
+        resetButton.addEventListener("click", () => {
+            items.forEach(x => {
+                x.classList.remove("highlight");
+            })
+        });
+
+        hideBtn.addEventListener("click", () => {
+            items.forEach(item => {
+                if (!item.classList.contains("highlight")) {
+                    item.style.display = "none";
+                }
+            })
+        });
+        
+
+    </script>
+</body>
+</html>
