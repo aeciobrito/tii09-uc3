@@ -49,3 +49,9 @@ button {
 button:hover {
     opacity: 0.8;
 }
+
+.resultado {
+    margin-top: 20px;
+    font-size: 32px;
+    font-weight: bold;
+}
