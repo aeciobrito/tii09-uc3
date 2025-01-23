@@ -48,8 +48,8 @@ function repositionSquares() {
 }
 
 function repositionSquare(square) {
-  const areaWidth = gameArea.clientWidth - 50; // Largura máxima permitida
-  const areaHeight = gameArea.clientHeight - 50; // Altura máxima permitida
+  const areaWidth = gameArea.clientWidth - 25; // Largura máxima permitida
+  const areaHeight = gameArea.clientHeight - 25; // Altura máxima permitida
 
   const randomX = Math.floor(Math.random() * areaWidth);
   const randomY = Math.floor(Math.random() * areaHeight);
