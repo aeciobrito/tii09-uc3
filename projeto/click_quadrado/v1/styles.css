@@ -1,0 +1,44 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background-color: #f0f0f0;
+  margin: 0;
+  padding: 0;
+}
+
+#game-area {
+  width: 600px;
+  height: 600px;
+  margin: 20px auto;
+  position: relative;
+  background-color: #ddd;
+  border: 2px solid #ccc;
+  overflow: hidden;
+}
+
+#square {
+  width: 50px;
+  height: 50px;
+  background-color: blueviolet;
+  position: absolute;
+  display: none;
+  cursor: pointer;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: green;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #27ae60;
+}
+
+#score, #timer {
+  font-size: 18px;
+  color: #555;
+}
