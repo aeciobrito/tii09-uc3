@@ -34,7 +34,7 @@ btnComprar.addEventListener("click", () => {
     });
     resultado.innerText = `Preço Total R$ ${precoTotal}`;
 
-    const mensagem = encodeURI(`Olá, gostaria de comprar os seguintes produtos:\n\n${listaProdutos.join("\n")}`);
+    const mensagem = encodeURI(`Olá, gostaria de comprar os seguintes produtos:\n\n${listaProdutos.join("\n")}\n\n R$ ${precoTotal}`);
 
     whatsappLink.href = `https://wa.me/${telefoneDoWhatsapp}?text=${mensagem}`;
 
