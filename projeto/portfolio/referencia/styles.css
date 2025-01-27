@@ -1,0 +1,285 @@
+/* Core reset and box-sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure {
+  margin: 0;
+}
+
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+  padding: 0;
+}
+
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  letter-spacing: -0.01em;
+}
+
+/* Image styling */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inputs, buttons, and textareas */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+h1 {
+  font-size: 3rem; /* Simplified font size */
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.75rem;
+}
+
+h4 {
+  font-size: 1.5rem;
+}
+
+h5 {
+  font-size: 1.25rem;
+}
+
+/* Wrapper classes */
+.wrapper {
+  width: 100%;
+  max-width: 1240px;
+  margin: 0 auto;
+}
+
+.wrapper_inner {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Flexbox utility classes */
+.flex {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.flex_center {
+  justify-content: center;
+}
+
+.flex_around {
+  justify-content: space-around;
+}
+
+.flex_between {
+  justify-content: space-between;
+}
+
+.text_center {
+  text-align: center;
+}
+
+.text_right {
+  text-align: right;
+}
+
+/* Padding classes */
+.padding-top-3xs {
+  padding: 0.5rem;
+}
+
+/* Section styles */
+section {
+  padding: 2rem 1rem;
+}
+
+/* Hero Section */
+section#hero {
+  background: linear-gradient(rgba(26, 26, 64, 0.9), rgba(26, 26, 64, 0.9)),
+    url("assets/background_image.jpg");
+  padding-bottom: 4px;
+  background-size: cover;
+  background-position: top;
+  background-attachment: scroll;
+  color: #fafafa;
+}
+
+.hero_content {
+  padding: 4rem 0;
+}
+
+.hero_content h1 {
+  margin-bottom: 1rem;
+}
+
+.hero_social {
+  padding-top: 4rem;
+}
+
+/* About Section */
+section#about {
+  background-color: #ffffff;
+  color: #333;
+}
+
+.about_content {
+  padding: 2rem 0;
+  transform: skewX(-10deg);
+}
+
+@media (max-width: 468px) {
+  .about_content {
+    transform: skewX(0deg);
+  }
+}
+
+.about_figure {
+  padding: 2rem 0;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border: 2px solid #ccc;
+  display: inline-block;
+  padding: 5px;
+}
+
+.about_img {
+  width: 300px;
+  height: 200px;
+  object-fit: cover;
+}
+
+.about_caption {
+  padding: 0.5rem 0;
+}
+
+/* Work Section */
+section#work {
+  background-color: #87ceeb;
+  color: #0c0c0c;
+}
+
+.work_logos {
+  margin-top: 2rem;
+}
+
+.work_logos li {
+  list-style: none;
+}
+
+.work_logos img {
+  max-height: 80px;
+  /* Adjust height */
+  object-fit: contain;
+  /* Maintain proportions */
+  width: auto;
+  display: block;
+}
+
+/* Contact Section */
+section#contact {
+  background-color: #4b0082;
+  color: #e6e6fa;
+}
+
+.contact_form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form_group {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 10px;
+}
+
+textarea {
+  resize: vertical;
+  height: 150px;
+}
+
+button[type="submit"] {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+/* Footer Section */
+section#footer {
+  background-color: #1a1a40;
+  color: #fafafa;
+  padding: 1rem;
+}
+
+/* Navigation Header */
+.site_header {
+  padding: 1rem 0; /* Simplified padding */
+  background: linear-gradient(rgba(26, 26, 64, 0.9), rgba(26, 26, 64, 0.9));
+}
+
+.site_header_nav ul {
+  display: flex;
+  justify-content: space-around;
+  padding: 0;
+}
+
+.site_header_nav ul li {
+  list-style: none;
+}
+
+.site_header_nav ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.25rem; /* Adjust font size */
+  font-weight: bold; /* Bold text */
+  padding: 0.5rem 1rem;
+}
+
+.site_header_nav ul li a:hover {
+  background-color: rgba(138, 43, 226, 0.8); /* Accent color on hover */
+}
